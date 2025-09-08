@@ -6,9 +6,8 @@ async function download(options: DownloadOptions): Promise<void> {
 }
 
 download({
-    path: '/wallpapers',
+    paths: ['/wallpapers'],
     project: 'pinn',
-    // saveDir: './mingw-w64',
     concurrency: 4,
 }).catch((error) => {
     console.error('Download failed:', error);

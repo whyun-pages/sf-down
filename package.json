@@ -1,21 +1,24 @@
 {
 	"name": "sf-down",
 	"version": "1.0.0",
-	"description": "A simple and efficient download tool for ShareFile.",
+	"description": "A simple and efficient download tool for Sourceforge.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
+	"bin": "dist/cjs/cli.js",
 	"scripts": {
 		"build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
 		"prepublishOnly": "npm run build",
-		"test": "tsx test/batch.test.ts"
+		"lint:fix": "biome lint --write",
+		"dev": "tsx src/cli.ts",
+		"test": "tsx test/basic.test.ts"
 	},
 	"engines": {
 		"node": ">=18"
 	},
 	"repository": {
-		"type": "git",
-		"url": "git+"
+		"type": "https",
+		"url": "https://github.com/whyun-pages/sf-down.git"
 	},
 	"keywords": [
 		"sourceforge",
@@ -25,12 +28,14 @@
 	"author": "yunnysunny",
 	"license": "MIT",
 	"devDependencies": {
+		"@biomejs/biome": "2.2.3",
 		"@types/node": "^24.3.1",
+		"@typescript-eslint/utils": "^8.42.0",
 		"tsx": "^4.20.5",
 		"typescript": "^5.9.2"
 	},
 	"dependencies": {
 		"@xmldom/xmldom": "^0.8.11",
-		"undici": "^7.15.0"
+		"commander": "^14.0.0"
 	}
 }

@@ -23,11 +23,11 @@ async function downloadAll() {
     osRPFs.forEach((os) => {
         paths.push(`/os_rpf/${os}`);
     });
-    await Promise.all(paths.map((path) => new Downloader({
-        path,
+    await new Downloader({
+        paths,
         project: 'pinn',
         concurrency: 4,
-    }). download()));
+    }). download();
 }
 downloadAll().then(() => {
     console.log('All downloads completed.');

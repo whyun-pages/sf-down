@@ -17,8 +17,8 @@ npm install sf-down
 import { download } from 'sf-down';
 await download({
     project: 'your-project-name',
-    path: '/path/to/files',
+    paths: ['/path/to/files'],
     saveDir: './downloads',
     concurrency: 5,// Optional: number of concurrent downloads, default is 8
-    reqTimeoutMs: 15000 // Optional: request timeout in milliseconds
+    reqTimeoutMs: 15000 // Optional: request timeout in milliseconds, default is 10000
 });

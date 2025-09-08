@@ -1,10 +1,12 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
+        "rootDir": "./src",
         "outDir": "./dist/cjs",
         "module": "CommonJS",
         "target": "es2020",
         "verbatimModuleSyntax": false,
         "moduleDetection": "auto"
-    }
+    },
+    "include": ["src/**/*"]
 }
