@@ -1,6 +1,6 @@
 {
 	"name": "sf-down",
-	"version": "0.0.0",
+	"version": "0.0.1-0",
 	"description": "A simple and efficient download tool for Sourceforge.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
