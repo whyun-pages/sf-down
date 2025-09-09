@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import { Command } from "commander";
 import { Downloader } from "./downloader.js";
 import * as pkg from '../package.json';
