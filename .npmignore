@@ -1,2 +1,7 @@
 test/
 files/
+.vscode/
+.github/
+.prettierc
+.biome/
+*.tgz

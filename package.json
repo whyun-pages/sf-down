@@ -8,7 +8,7 @@
 	"bin": "dist/cjs/cli.js",
 	"scripts": {
 		"build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "npm run build && shx cp package.json dist/",
 		"lint:fix": "biome lint --write",
 		"dev": "tsx src/cli.ts",
 		"test": "tsx test/basic.test.ts"
@@ -30,6 +30,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.3",
 		"@types/node": "^24.3.1",
+		"shx": "^0.4.0",
 		"tsx": "^4.20.5",
 		"typescript": "^5.9.2"
 	},
