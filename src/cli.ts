@@ -13,7 +13,7 @@ program
     .name(pkg.name)
     .description(pkg.description)
     .version(pkg.version)
-    .requiredOption('-p, --project <project>', 'SourceForge project name', 'pinn')
+    .requiredOption('-p, --project <project>', 'SourceForge project name')
     .option('-d, --dir [dir]', 'Directory to save downloaded files', './files')
     .option('-c, --concurrency [number]', 'Number of concurrent downloads', (value) => parseInt(value, 10), 4)
     .option('-t, --timeout [ms]', 'Request timeout in milliseconds', (value) => parseInt(value, 10), 10000)
