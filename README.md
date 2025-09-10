@@ -24,6 +24,7 @@ await download({
     concurrency: 5,// Optional: number of concurrent downloads, default is 8
     reqTimeoutMs: 15000 // Optional: request timeout in milliseconds, default is 10000
 });
+```
 
 ### As a CLI tool
 
